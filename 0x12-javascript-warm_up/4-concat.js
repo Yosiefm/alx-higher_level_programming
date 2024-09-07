@@ -1,9 +1,5 @@
 #!/usr/bin/node
 
-const [,, arg1, arg2] = process.argv;
+const [,, arg1 = 'undefined', arg2 = 'undefined'] = process.argv;
 
-if (arg1 && arg2) {
-  console.log(`${arg1} is ${arg2}`);
-} else {
-  console.log('Missing arguments');
-}
+console.log(`${arg1} is ${arg2}`);
